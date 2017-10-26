@@ -1,7 +1,7 @@
 namespace :system do
   namespace :update_derivation do
     desc "Calculates flows to fix and creates the relevant flows"
-    task :roll [:environment] do |t, args|
+    task :roll => :environment  do
     	file = File.read("#{Rails.root}/public/email_classification.json")
     	data_hash = JSON.parse(file)
     	data_hash.each do |full_name, email|

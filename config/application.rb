@@ -33,7 +33,7 @@ module EmailClassificationBackend
         resource '/cors',
           :headers => :any,
           :methods => [:post],
-          :credentials => true,
+          :credentials => false,
           :max_age => 0
 
         resource '*',
