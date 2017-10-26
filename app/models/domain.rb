@@ -2,7 +2,6 @@ require 'json'
 class Domain < ApplicationRecord
 
 	def self.process_domain_file
-		counter = 1
 		file = File.read("#{Rails.root}/public/email_classification.json")
 		data_hash = JSON.parse(file)
 		data_hash.each do |full_name, email|
